@@ -1,0 +1,8 @@
+C:\Users\wartelon\OneDrive\Documentos\GitHub\ASP.NET-API-Com-Auth-BearerJwt\ApiAuth\obj\Debug\net5.0\ApiAuth.csproj.AssemblyReference.cache
+C:\Users\wartelon\OneDrive\Documentos\GitHub\ASP.NET-API-Com-Auth-BearerJwt\ApiAuth\obj\Debug\net5.0\ApiAuth.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wartelon\OneDrive\Documentos\GitHub\ASP.NET-API-Com-Auth-BearerJwt\ApiAuth\obj\Debug\net5.0\ApiAuth.AssemblyInfoInputs.cache
+C:\Users\wartelon\OneDrive\Documentos\GitHub\ASP.NET-API-Com-Auth-BearerJwt\ApiAuth\obj\Debug\net5.0\ApiAuth.AssemblyInfo.cs
+C:\Users\wartelon\OneDrive\Documentos\GitHub\ASP.NET-API-Com-Auth-BearerJwt\ApiAuth\obj\Debug\net5.0\ApiAuth.csproj.CoreCompileInputs.cache
+C:\Users\wartelon\OneDrive\Documentos\GitHub\ASP.NET-API-Com-Auth-BearerJwt\ApiAuth\obj\Debug\net5.0\ApiAuth.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\wartelon\OneDrive\Documentos\GitHub\ASP.NET-API-Com-Auth-BearerJwt\ApiAuth\obj\Debug\net5.0\ApiAuth.RazorAssemblyInfo.cache
+C:\Users\wartelon\OneDrive\Documentos\GitHub\ASP.NET-API-Com-Auth-BearerJwt\ApiAuth\obj\Debug\net5.0\ApiAuth.RazorAssemblyInfo.cs
