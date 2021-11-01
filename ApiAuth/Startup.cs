@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Authentication;
+using ApiAuth.Settings;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace ApiAuth
 {
@@ -18,12 +21,41 @@ namespace ApiAuth
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public Startup(IConfiguration configuration) 
+        {
+            this.Configuration = configuration;
+               
+        }
+                public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            var key = Encoding.ASCII.GetBytes(Settings.Secret);
+
+            services.AddAuthentication(x =>{
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+              
+              .AddJwtBearer(x=>{
+                  x.RequireHttpsMetadata = false;
+                  x.SaveToken = true;
+                  x.TokenValidationParameters = new TokenValidationParameters
+                  {
+                        ValidateIssuerSigningkey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(key),
+                        ValidateIssuer = false,
+                        ValidateAudience = false
+                  };
+              });
+
+
+            
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +76,7 @@ namespace ApiAuth
 
             app.UseRouting();
 
+            app.UserAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
